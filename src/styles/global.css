@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-background: #1a1a1a;
+  --color-foreground: #fafafa;
+  --color-primary: #f5c400;
+  --color-primary-foreground: #1a1a1a;
+  --color-muted: #2b2b2b;
+  --color-muted-foreground: #a3a3a3;
+  --color-border: #454545;
+  --font-sans: "Gabarito Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-background text-foreground antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-dvh font-sans;
+  }
+}
+
+@layer components {
+  .prose-changelog {
+    @apply prose prose-invert max-w-none prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-ul:my-4 prose-li:my-1.5;
+  }
+
+  .prose-changelog .changelog-release {
+    @apply mt-14 border-t border-border pt-10 first:mt-0 first:border-t-0 first:pt-0;
+  }
+
+  .prose-changelog .changelog-release h2 {
+    @apply m-0 border-0 p-0 font-semibold tracking-tight text-foreground;
+  }
+
+  .prose-changelog .changelog-release--major h2 {
+    @apply flex flex-col gap-1 sm:gap-1.5;
+  }
+
+  .prose-changelog .changelog-version {
+    @apply text-3xl text-primary sm:text-4xl;
+  }
+
+  .prose-changelog .changelog-subtitle {
+    @apply text-lg font-medium tracking-tight text-foreground sm:text-xl;
+  }
+
+  .prose-changelog .changelog-release:not(.changelog-release--major) h2 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  .prose-changelog .changelog-date {
+    @apply mt-1 mb-5 text-sm font-normal text-muted-foreground;
+  }
+
+  .prose-changelog .changelog-release--major .changelog-date {
+    @apply mb-6;
+  }
+}
