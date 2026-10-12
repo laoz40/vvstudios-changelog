@@ -4,9 +4,11 @@
 
 <p class="changelog-date">12 October 2026</p>
 
-- Review emails include a link to the session file folder.
-- Admin booking rows show a price breakdown for online payments.
-- Legacy bookings without a recorded payment show an estimated price when one can be calculated.
+- Host review emails include a button to open the session's Drive deliverables folder when a saved link is available.
+- Admin booking rows show a price breakdown with checkout payments, manual balances, and invoice amounts.
+- Admins can copy Stripe payment and invoice IDs from the price breakdown.
+- Legacy bookings without a recorded payment amount show an unverified estimate based on current rates, including bookings already linked to Stripe.
+- The contractor list shows each editor's active job count. Admins can open the count to see clients, services, delivery deadlines, and admin and editor notes.
 
 </section>
 
