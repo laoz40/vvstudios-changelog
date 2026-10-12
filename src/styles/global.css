@@ -59,4 +59,12 @@
   .prose-changelog .changelog-release--major .changelog-date {
     @apply mb-6;
   }
+
+  .prose-changelog .changelog-mark {
+    @apply mt-16 flex justify-center border-t border-border pt-12;
+  }
+
+  .prose-changelog .changelog-mark img {
+    @apply h-28 w-28 sm:h-32 sm:w-32;
+  }
 }
