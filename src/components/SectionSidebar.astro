@@ -1,0 +1,91 @@
+<section-sidebar class="section-sidebar" hidden>
+	<details class="section-navigation">
+		<summary>
+			<span>Releases</span>
+			<span class="section-navigation-current"></span>
+		</summary>
+		<nav aria-label="Changelog releases">
+			<ul class="section-navigation-list"></ul>
+		</nav>
+	</details>
+</section-sidebar>
+
+<script>
+	class SectionSidebar extends HTMLElement {
+		connectedCallback() {
+			const details = this.querySelector("details");
+			const list = this.querySelector("ul");
+			const currentLabel = this.querySelector(".section-navigation-current");
+			if (!details || !list || !currentLabel) return;
+
+			const releases = Array.from(document.querySelectorAll<HTMLElement>(".changelog-release"));
+			const entries = releases.flatMap((section, index) => {
+				const heading = section.querySelector("h2");
+				if (!heading) return [];
+				const version = heading.querySelector(".changelog-version")?.textContent ?? heading.textContent ?? "";
+				const subtitle = heading.querySelector(".changelog-subtitle")?.textContent?.trim();
+				const label = [version.replace(/^\s*Version\s+/i, "").trim(), subtitle].filter(Boolean).join(" - ");
+				section.id ||= `release-${version.match(/\d+\.\d+/)?.[0].replace(".", "-") ?? index}`;
+				const link = document.createElement("a");
+				link.href = `#${section.id}`;
+				link.textContent = label;
+				const item = document.createElement("li");
+				item.append(link);
+				list.append(item);
+				return [{ section, link, label }];
+			});
+			if (!entries.length) return;
+			this.hidden = false;
+			const firstEntry = entries[0];
+			if (!firstEntry) return;
+
+			const desktop = window.matchMedia("(min-width: 1024px)");
+			let activationOffset = 0;
+			const updateLayout = () => {
+				details.open = desktop.matches;
+				activationOffset = parseFloat(getComputedStyle(firstEntry.section).scrollMarginTop) + 16;
+			};
+			updateLayout();
+			desktop.addEventListener("change", updateLayout);
+			details.addEventListener("click", (event) => {
+				if (desktop.matches && event.target instanceof Element && event.target.closest("summary")) event.preventDefault();
+			});
+			list.addEventListener("click", (event) => {
+				if (!desktop.matches && event.target instanceof Element && event.target.closest("a")) details.open = false;
+			});
+
+			let activeLink: HTMLAnchorElement | undefined;
+			const updateActive = () => {
+				let active = entries[0];
+				for (const entry of entries) {
+					if (entry.section.getBoundingClientRect().top > activationOffset) break;
+					active = entry;
+				}
+				if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) active = entries.at(-1);
+				if (!active || activeLink === active.link) return;
+				activeLink?.removeAttribute("aria-current");
+				active.link.setAttribute("aria-current", "location");
+				activeLink = active.link;
+				currentLabel.textContent = active.label;
+				const nav = list.parentElement;
+				if (nav && desktop.matches) {
+					const top = active.link.getBoundingClientRect().top - nav.getBoundingClientRect().top;
+					if (top < 0) nav.scrollTop += top;
+					else if (top + active.link.offsetHeight > nav.clientHeight) nav.scrollTop += top + active.link.offsetHeight - nav.clientHeight;
+				}
+			};
+			let frame = 0;
+			const scheduleUpdate = () => {
+				if (frame) return;
+				frame = requestAnimationFrame(() => { frame = 0; updateActive(); });
+			};
+			window.addEventListener("scroll", scheduleUpdate, { passive: true });
+			window.addEventListener("resize", scheduleUpdate);
+			window.addEventListener("hashchange", scheduleUpdate);
+			// Generated anchors need an initial scroll when opening a shared release link.
+			entries.find(({ section }) => `#${section.id}` === window.location.hash)?.section.scrollIntoView();
+			updateActive();
+		}
+	}
+	customElements.define("section-sidebar", SectionSidebar);
+</script>

@@ -1,10 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionSidebar from "../components/SectionSidebar.astro";
 import { Content as Changelog } from "../content/changelog.md";
 ---
 
 <Layout>
-	<article class="prose-changelog">
-		<Changelog />
-	</article>
+	<div class="grid items-start gap-8 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-16">
+		<SectionSidebar />
+		<article class="prose-changelog min-w-0">
+			<Changelog />
+		</article>
+	</div>
 </Layout>

@@ -3,6 +3,7 @@
 
 @theme {
   --color-background: #1a1a1a;
+  --color-sidebar: #101010;
   --color-foreground: #fafafa;
   --color-primary: #f5c400;
   --color-primary-foreground: #1a1a1a;
@@ -24,12 +25,45 @@
 }
 
 @layer components {
+  .section-sidebar {
+    @apply sticky top-4 z-10 block min-w-0 rounded-lg bg-sidebar lg:top-8 lg:z-auto lg:bg-background;
+  }
+
+  .section-sidebar[hidden] {
+    display: none;
+  }
+
+  .section-navigation summary {
+    @apply cursor-pointer px-4 py-3 text-sm font-semibold lg:pointer-events-none lg:list-none;
+  }
+
+  .section-navigation-current {
+    @apply mt-1 block truncate text-xs font-normal text-primary lg:hidden;
+  }
+
+  .section-navigation nav {
+    @apply max-h-[60dvh] overflow-y-auto p-2 lg:max-h-[calc(100dvh-8rem)];
+  }
+
+  .section-navigation-list {
+    @apply flex list-none flex-col gap-1;
+  }
+
+  .section-navigation-list a {
+    @apply block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .section-navigation-list a[aria-current="location"] {
+    @apply font-medium text-primary;
+  }
+
   .prose-changelog {
     @apply prose prose-invert max-w-none prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-ul:my-4 prose-li:my-1.5;
   }
 
   .prose-changelog .changelog-release {
     @apply mt-14 border-t border-border pt-10 first:mt-0 first:border-t-0 first:pt-0;
+    scroll-margin-top: 7rem;
   }
 
   .prose-changelog .changelog-release h2 {
@@ -66,5 +100,17 @@
 
   .prose-changelog .changelog-mark img {
     @apply h-28 w-28 sm:h-32 sm:w-32;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prose-changelog .changelog-release {
+    scroll-margin-top: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
