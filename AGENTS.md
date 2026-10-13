@@ -22,7 +22,7 @@ Don't reduce words and context that would help make the bullet point easier to u
 
 ### Changelog bullet points
 
-- Write each bullet as a complete sentence with a clear subject and verb. Avoid feature names on their own, such as "Gallery page."
+- Write each bullet as a complete sentence with a clear subject and verb.
 - Make it clear whether the release added something new, changed existing behavior, or removed something.
 - Prefer describing the resulting behavior: "Clients can now...", "The booking form now shows...", or "The contact page now includes...".
 - Name the affected page, feature, or user role so readers understand where the change applies.
@@ -32,6 +32,7 @@ Don't reduce words and context that would help make the bullet point easier to u
 - Use plain, specific language. Avoid vague descriptions such as "improved experience" or "updated layout" without explaining the change.
 - Only include details supported by the source material. Check the original change when context is missing.
 - Prioritize clarity over brevity. Keep articles, verbs, and context that make the sentence easy to understand.
+- Use bold text to emphasise the key words within each bullet point
 
 ### Grouping changes
 
