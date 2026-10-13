@@ -83,7 +83,7 @@
   }
 
   .prose-changelog .changelog-release:not(.changelog-release--major) h2 {
-    @apply text-xl sm:text-2xl;
+    @apply text-2xl sm:text-3xl;
   }
 
   .prose-changelog .changelog-date {

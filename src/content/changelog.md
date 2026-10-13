@@ -1,44 +1,54 @@
 <section class="changelog-release">
 
-## Version 6.2
+## Version 5.5
 
 <p class="changelog-date">12 October 2026</p>
 
-- Host review emails include a button to open the session's Drive deliverables folder when a saved link is available.
-- Admin booking rows show a price breakdown with checkout payments, manual balances, and invoice amounts.
-- Admins can copy Stripe payment and invoice IDs from the price breakdown.
-- Legacy bookings without a recorded payment amount show an unverified estimate based on current rates, including bookings already linked to Stripe.
-- The contractor list shows each editor's active job count. Admins can open the count to see clients, services, delivery deadlines, and admin and editor notes.
+### Emails
+
+- Hosts can now open a session's **Google Drive deliverables folder** from the review email when a folder link is available.
+
+### Admin dashboard
+
+- Booking rows now show a **price breakdown** with checkout payments, manually recorded balances, and invoice amounts.
+- Admins can now copy **Stripe payment and invoice IDs** from the **price breakdown**.
+- Older bookings without a recorded payment amount now show an **estimate based on current rates**, marked as unverified. This also applies to bookings already linked to Stripe.
+- The contractor list now shows each editor's **active job count**. Admins can open the count to see the clients, services, delivery deadlines, and notes for those jobs.
 
 </section>
 
 <section class="changelog-release">
 
-## Version 6.1
+## Version 5.4
 
 <p class="changelog-date">25 September – 1 October 2026</p>
 
-- Dashboard hints use tap popovers on mobile instead of hover.
-- Editor rows show edit due dates.
-- Deliverable status can be changed from the badge on the editor dashboard.
-- Google Drive link for a session opens only after the editor starts the job.
-- Host email when an editor marks deliverables ready for review.
-- Session notes can be cycled between client, editor, and admin views.
+### Admin dashboard
+
+- Admins can now **tap dashboard hints on mobile** to read extra details, instead of needing to hover over them.
+- Admins can now switch between **client, editor, and admin notes** in the session list.
+
+### Editor dashboard
+
+- The editor dashboard now shows the **due date** for each assigned edit.
+- Editors can now change a session's **deliverable status** directly from its status badge.
+- Editors can now open a session's **Google Drive folder** only after starting the job.
+
+### Emails
+
+- Hosts now receive an email when an editor marks deliverables as **ready for review**.
 
 </section>
 
-<section class="changelog-release changelog-release--major">
+<section class="changelog-release">
 
-<h2>
-<span class="changelog-version">Version 6.0</span>
-<span class="changelog-subtitle">Admin inbox & search</span>
-</h2>
+## Version 5.3
 
 <p class="changelog-date">24–30 September 2026</p>
 
-- Sessions and packages split into **Inbox** and **All** lists.
-- Completed or expired items move to archive automatically.
-- Admin search by name, email, phone, and receipt number.
+- Admins can now browse sessions and packages in separate **Inbox and All lists**.
+- Completed or expired sessions and packages now move to the **archive automatically**.
+- Admins can now **search bookings** by name, email, phone number, or receipt number.
 
 </section>
 
@@ -48,10 +58,18 @@
 
 <p class="changelog-date">14–20 September 2026</p>
 
-- Package sessions scheduled in a dedicated dialog.
-- Music Setup available when scheduling package sessions.
-- Home page **Setups** section added.
-- Admin session and package lists use infinite scroll.
+### Website
+
+- The home page now has a **Setups section** where visitors can browse the studio's recording spaces.
+
+### Package bookings
+
+- Clients can now schedule package sessions in a **dedicated scheduling window**.
+- Clients can now choose **Music Setup** when scheduling a package session.
+
+### Admin dashboard
+
+- Session and package lists now **load more bookings** as admins scroll down.
 
 </section>
 
@@ -61,10 +79,10 @@
 
 <p class="changelog-date">16–18 September 2026</p>
 
-- Resend payment receipts from the dashboard.
-- Download receipt PDFs from the dashboard.
-- Send ad-hoc invoices from the dashboard.
-- Package balance adjustments can be billed through the online payment system.
+- Admins can now **resend payment receipts** from the dashboard.
+- Admins can now **download payment receipts as PDF files** from the dashboard.
+- Admins can now send **one-off invoices** from the dashboard.
+- Admins can now bill clients online for **adjustments to their package balance**.
 
 </section>
 
@@ -72,14 +90,14 @@
 
 <h2>
 <span class="changelog-version">Version 5.0</span>
-<span class="changelog-subtitle">Pay when you book</span>
+<span class="changelog-subtitle">Upfront Stripe Payments</span>
 </h2>
 
 <p class="changelog-date">12–19 September 2026</p>
 
-- Online payment required at booking time for single sessions.
-- Online payment required at booking time for packages.
-- Email receipt sent after successful payment.
+- Clients must now **pay through Stripe** when booking a single session.
+- Clients must now **pay through Stripe** when purchasing a package.
+- Clients now receive an **email receipt** after a successful payment.
 
 </section>
 
@@ -89,12 +107,20 @@
 
 <p class="changelog-date">2–7 September 2026</p>
 
-- **Complete Edit** add-on, with its own quantity on the form.
-- **Handcrafted Clips** add-on, with its own quantity on the form.
-- Bookings accept a wider range of email addresses.
-- Guest folder links supported where needed.
-- Admin privacy mode to hide sensitive fields on screen.
-- Admins can enroll themselves as editors for assignment.
+### Booking form
+
+- Clients can now select the **Complete Edit** add-on and set its quantity on the booking form.
+- Clients can now select the **Handcrafted Clips** add-on and set its quantity on the booking form.
+- The booking form now accepts a **wider range of email addresses**.
+
+### Session files
+
+- Clients can now open **shared asset and deliverables folders** through links, even if they do not use a Google account.
+
+### Admin dashboard
+
+- Admins can now hide sensitive information on screen using **privacy mode**.
+- Admins can now **register themselves as editors** so they can be assigned to sessions.
 
 </section>
 
@@ -104,9 +130,9 @@
 
 <p class="changelog-date">2–9 September 2026</p>
 
-- Automatic shared folder per session for files and deliverables.
-- Folder creation retries if the first attempt fails.
-- Client assets email only for bookings that include editing add-ons.
+- Single-session bookings now get **shared Google Drive folders** for client files and finished deliverables automatically.
+- Admins can now **retry folder setup** from the dashboard if it fails.
+- Clients now receive an **email requesting their files** only when their booking includes editing add-ons.
 
 </section>
 
@@ -116,12 +142,17 @@
 
 <p class="changelog-date">31 July – 11 August 2026</p>
 
-- **Music Setup** recording space on the booking form.
-- Preview images for Music Setup on the booking form.
-- Date picker shows times that are already booked.
-- Date picker greys out days with no openings left.
-- Clips Package requires Essential Edit.
-- Reschedule host emails use different subject and body from new booking emails.
+### Booking form
+
+- Clients can now choose **Music Setup** as their **recording space** on the booking form.
+- The booking form now shows **preview images** of **Music Setup**.
+- The date picker now shows which **times are already booked**.
+- The date picker now greys out **days with no available times**.
+- Clients must now select **Essential Edit** when booking the **Clips Package**.
+
+### Emails
+
+- **Rescheduling emails** to hosts now use different subject lines and messages from new booking emails.
 
 </section>
 
@@ -134,12 +165,17 @@
 
 <p class="changelog-date">6–11 August 2026</p>
 
-- Editor sign-in and dashboard listing assigned sessions.
-- Editors can update deliverable status from the dashboard.
-- Editors can leave notes and submit work for review.
-- Admin **Editors** tab to assign editors to sessions.
-- Due dates on editor assignments.
-- History of completed edits per editor.
+### Editor dashboard
+
+- Editors can now sign in to a dashboard that lists their **assigned sessions**.
+- Editors can now update the **status of a session's deliverables** from their dashboard.
+- Editors can now leave **session notes** and **submit their work for review**.
+
+### Admin dashboard
+
+- Admins can now **assign editors to sessions** from the Editors tab.
+- Admins can now set **due dates** for assigned edits.
+- Admins can now view each editor's **history of completed edits**.
 
 </section>
 
@@ -149,11 +185,16 @@
 
 <p class="changelog-date">10–16 June 2026</p>
 
-- Reschedule links in invoice emails.
-- Reschedule links in reminder emails.
-- Reschedule links work after a failed payment attempt.
-- Admin booking edits update the studio calendar.
-- Cancelling a booking can remove its calendar event.
+### Booking emails
+
+- Clients can now reschedule their sessions using a **link in their invoice emails**.
+- Clients can now reschedule their sessions using a **link in their reminder emails**.
+- Clients can now use **rescheduling links** even after a failed payment attempt.
+
+### Admin dashboard
+
+- Changes admins make to bookings now **update the studio calendar**.
+- Admins can now **remove a booking's calendar event** when cancelling the booking.
 
 </section>
 
@@ -163,9 +204,14 @@
 
 <p class="changelog-date">3–4 June 2026</p>
 
-- Separate quantity field for each editing add-on on the booking form.
-- Admin tables list add-on quantities per booking.
-- Admin tables show session dates as relative text (for example “in 3 days”).
+### Booking form
+
+- Clients can now set a **separate quantity** for each editing add-on on the booking form.
+
+### Admin dashboard
+
+- Booking tables now show the **quantity of each editing add-on**.
+- Session dates now show **how far away** they are, such as "in 3 days".
 
 </section>
 
@@ -178,14 +224,22 @@
 
 <p class="changelog-date">16 July 2026</p>
 
-- Multi-session **package** purchases.
-- Schedule each session in a package on its own date.
-- Recording space choice per package session.
-- Remote podcast option per package session where offered.
-- Package invoices and optional package discounts.
-- Email reminders for package payments.
-- Email reminders before a package offer expires.
-- Admin **Packages** section alongside single sessions.
+### Package bookings
+
+- Clients can now purchase **packages containing multiple sessions**.
+- Clients can now schedule each session in a package for a **separate date**.
+- Clients can now choose a **recording space** for each package session.
+- Clients can now choose the **Remote podcast** option for individual package sessions where it is offered.
+
+### Payments and emails
+
+- Admins can now issue **package invoices** and apply optional **package discounts**.
+- Clients now receive **email reminders about package payments**.
+- Clients now receive email reminders before their **package offer expires**.
+
+### Admin dashboard
+
+- Admins can now manage package bookings in a **Packages section** alongside their single-session bookings.
 
 </section>
 
@@ -195,19 +249,30 @@
 
 <p class="changelog-date">29 May – 4 June 2026</p>
 
-- Home page hero background video.
-- Testimonials section on the home page.
-- FAQ section with links to contact.
-- Privacy policy page.
-- Terms page.
-- **Remote podcast** add-on on the booking form.
-- Capacity notes on each recording space.
-- Warning when selected add-ons conflict with each other.
-- Custom invoices from the admin dashboard.
-- Track remaining balance owed per booking.
-- Deliverables emails to clients.
-- Deliverables marked sent or not sent in admin.
-- Admin pages only visible after staff sign-in.
+### Website
+
+- The home page now opens with a **background video**.
+- Visitors can now read **client testimonials** on the home page.
+- The home page FAQ links visitors to the contact page for **more help**.
+- Visitors can now read the studio's **privacy policy** on a dedicated page.
+- Visitors can now read the studio's **terms** on a dedicated page.
+
+### Bookings
+
+- Clients can now add the **Remote podcast option** to a booking.
+- The booking form now explains **how many people each recording space can accommodate**.
+- The booking form now warns clients when their selected add-ons **cannot be combined**.
+
+### Admin dashboard
+
+- Admins can now create **custom invoices** from the dashboard.
+- Admins can now track the **remaining balance** owed for each booking.
+- Admins can now mark client deliverables as **sent or not sent**.
+- Staff must now **sign in** to view admin pages.
+
+### Emails
+
+- Clients now receive emails with their **session deliverables**.
 
 </section>
 
@@ -217,12 +282,17 @@
 
 <p class="changelog-date">1–10 May 2026</p>
 
-- Animated yellow logo mark (SVG) on error pages.
-- Optional “remember my details” on the booking form.
-- Invoice emails list date, time, and amount paid more clearly.
-- Reminder emails list date, time, and amount paid more clearly.
-- Smooth scroll on marketing pages.
-- Light motion on marketing pages.
+### Website
+
+- Error pages now show an **animated yellow VV Studios logo**.
+- Marketing pages now **scroll smoothly**.
+- Marketing pages now include **subtle animations**.
+
+### Bookings and emails
+
+- Clients can now choose to **save their details** in the booking form for their next visit.
+- Invoice emails now make the **session date, time, and amount paid** easier to find.
+- Reminder emails now make the **session date, time, and amount paid** easier to find.
 
 </section>
 
@@ -232,15 +302,20 @@
 
 <p class="changelog-date">30 April – 1 May 2026</p>
 
-- Admin dashboard listing sessions.
-- Sort and filter sessions in admin.
-- Cancel bookings from admin.
-- Resend invoice emails from admin.
-- Download invoice PDF from the booking confirmation page.
-- Download invoice PDF from the admin dashboard.
-- Set studio opening hours in admin settings.
-- Set how many days in advance clients can book.
-- Set buffer time between consecutive sessions in admin settings.
+### Admin dashboard
+
+- Admins can now view their sessions in a **dashboard**.
+- Admins can now **sort and filter** the session list.
+- Admins can now **cancel bookings** from the dashboard.
+- Admins can now **resend invoice emails** from the dashboard.
+- Admins can now **download invoices as PDF files** from the dashboard.
+- Admins can now set the **studio opening hours** in dashboard settings.
+- Admins can now set **how many days in advance clients can book**.
+- Admins can now set a **buffer between consecutive sessions** in dashboard settings.
+
+### Booking confirmation
+
+- Clients can now **download their invoice as a PDF file** from the booking confirmation page.
 
 </section>
 
@@ -253,16 +328,18 @@
 
 <p class="changelog-date">17 April – 1 May 2026</p>
 
-- Migrated website to the new platform.
-- Visual design matched the previous site.
-- Removed **TidyCal** scheduling.
-- Booking uses the on-site form only.
-- Optional “request a call” on the booking form.
-- Available times come from the studio calendar.
-- Confirmed bookings add events to the studio calendar.
-- Online deposit payment at checkout.
-- PDF invoice emailed after confirmation.
-- Host email when a booking is confirmed.
+### Bookings and payments
+
+- Clients now book through the **on-site form**, which replaces TidyCal scheduling.
+- Clients can now **request a call** through the booking form.
+- The booking form now shows **available times** from the studio calendar.
+- Confirmed bookings now appear on the **studio calendar**.
+- Clients can now **pay a deposit online** at checkout.
+- Clients now receive their invoice as a **PDF file by email** after booking.
+
+### Studio notifications
+
+- Hosts now receive an email when a client **confirms a booking**.
 
 </section>
 
@@ -272,10 +349,15 @@
 
 <p class="changelog-date">11–16 April 2026</p>
 
-- Standalone pricing page.
-- Pricing section on the landing page.
-- Terms and conditions checkbox on the form.
-- Booking summary shows amount due before submit.
+### Website
+
+- Visitors can now view **studio pricing** on a dedicated page.
+- The home page now includes a section showing **studio pricing**.
+
+### Bookings
+
+- Clients must now **accept the terms and conditions** using a checkbox on the booking form.
+- The booking summary now shows the **amount due** before clients submit the form.
 
 </section>
 
@@ -285,13 +367,18 @@
 
 <p class="changelog-date">1–9 April 2026</p>
 
-- FAQ on the home page.
-- FAQ on the contact page.
-- Pricing display with package discounts.
-- Pricing badges on packages.
-- **TidyCal** scheduling opens in a new browser tab.
-- Pick a time in step 1 and session details in step 2 (separate steps).
-- Dialog before submit with studio policies and session expectations.
+### Website
+
+- Visitors can now find **answers to common questions** on the home page.
+- The contact page now includes **answers to common questions**.
+
+### Bookings
+
+- The booking form now shows **package discounts** alongside the pricing.
+- Packages now have **pricing badges** on the booking form.
+- Clients now choose their session time through **TidyCal instead of Google Calendar**, with scheduling opening in a new browser tab.
+- Clients now choose a session time in the **first step** of the booking form and enter session details in the second step.
+- The booking form now shows **studio policies and session expectations** before clients submit their booking.
 
 </section>
 
@@ -301,15 +388,14 @@
 
 <p class="changelog-date">30 March – 2 April 2026</p>
 
-- Custom VV Studios favicon for browser tabs.
-- App icons for adding the site to a phone home screen.
-- Logo image in the navigation bar.
-- Gallery page.
-- Photos page with masonry layout.
-- Contact page layout updates.
-- “Book a tour” call-to-action on contact.
-- Smooth scroll on the home page.
-- Load animation on the home page and navigation.
+- Browser tabs now display the **VV Studios icon**.
+- Visitors who add the site to their phone home screen now see a **VV Studios app icon**.
+- The navigation bar now displays the **VV Studios logo**.
+- Visitors can now browse a **grid of studio photos** on a dedicated gallery page.
+- The contact page now displays the studio's **contact details** over a microphone photo.
+- Visitors can now **book a studio tour** from the contact page.
+- The home page now **scrolls smoothly**.
+- The home page and navigation now **animate as they load**.
 
 </section>
 
@@ -322,7 +408,7 @@
 
 <p class="changelog-date">31 March 2026</p>
 
-- First production deploy on **Vercel** (public domain).
+- The website is now **publicly available on its own domain**.
 
 </section>
 
@@ -332,12 +418,12 @@
 
 <p class="changelog-date">14 March 2026</p>
 
-- On-site booking form for format, add-ons, and special requests (alongside the SimplyBook embed).
-- Form submissions saved to a **Google Sheet** via Google Apps Script.
-- Error messages shown next to invalid fields on the form.
-- Option to save name and contact fields in the browser for the next visit.
-- Clearer field labels and focus order on the booking form for keyboard users.
-- Form fields exposed correctly to screen readers.
+- Clients can now choose a **recording format and add-ons**, and enter special requests in an on-site booking form.
+- Clients now choose their session time through an **embedded Google Calendar appointment scheduler**, which replaces SimplyBook.
+- The booking form now shows **error messages** beside fields that need attention.
+- Clients can now **save their name and contact details** in their browser for their next visit.
+- The booking form now has **clearer labels and a field order** that is easier to follow with a keyboard.
+- Screen readers can now **identify the fields** on the booking form.
 
 </section>
 
@@ -347,10 +433,10 @@
 
 <p class="changelog-date">21–22 February 2026</p>
 
-- Landing page redesign (dark theme and current typography).
-- Contact page added.
-- Dropdown menu on desktop navigation.
-- Footer with studio street address.
+- The home page now uses a **dark theme and updated typography**.
+- Visitors can now find ways to reach the studio on a dedicated **contact page**.
+- Desktop navigation now includes a **dropdown menu**.
+- The footer now shows the studio's **street address**.
 
 </section>
 
@@ -363,8 +449,8 @@
 
 <p class="changelog-date">20 February 2026</p>
 
-- Initial site with navigation and studio pages.
-- **Book** button opening embedded **SimplyBook** scheduling.
+- Visitors can now browse the **first studio pages** using the site navigation.
+- Visitors can now choose a session time through the **embedded SimplyBook scheduler** by selecting Book.
 
 </section>
 
