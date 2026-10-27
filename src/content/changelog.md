@@ -4,6 +4,12 @@
 
 <p class="changelog-date">27 October 2026</p>
 
+### Bookings
+
+- Clients and admins can now combine **Rough Cut, Complete Edit, Clip Volume Pack, and Handcrafted Clips** in one session, each with its own quantity. Clip Volume Pack still requires Rough Cut or Complete Edit.
+
+### Editing and delivery
+
 - Admins can now choose **Mark as sent** to finish editing or **Keep editing another part** to send the current deliverables and start another round for the same session.
 - Choosing **Keep editing another part** resets the assignment to **Not started** and sends the editor a new assignment email. Admins can change the new due date, which defaults to six days from reassignment in Sydney time.
 - Admins can now set **custom due dates** when assigning editors. The dates appear in the editor dashboard, admin job list, and assignment emails.
