@@ -4,17 +4,9 @@
 
 <p class="changelog-date">27 October 2026</p>
 
-### Editing and delivery
-
-- Admins can now manage **multiple editing and delivery rounds** for one session.
-- The send-deliverables dialog now requires admins to choose either **Mark as sent** to finish the session's editing or **Keep editing another part** to start the next round.
-- Choosing **Keep editing another part** sends the current deliverables to the client, resets the editor's assignment to **Not started**, and queues a fresh assignment email for the editor.
-- Admins can now set a **new due date for the next part**, replacing the previous deadline. It defaults to six days from reassignment in Sydney time and can be changed before sending.
-
-### Due dates
-
-- Admins can now choose an **optional custom due date** when assigning or reassigning an editor to a session.
-- The **editor dashboard, admin job list, and assignment emails** now show the assigned due date.
+- Admins can now choose **Mark as sent** to finish editing or **Keep editing another part** to send the current deliverables and start another round for the same session.
+- Choosing **Keep editing another part** resets the assignment to **Not started** and sends the editor a new assignment email. Admins can change the new due date, which defaults to six days from reassignment in Sydney time.
+- Admins can now set **custom due dates** when assigning editors. The dates appear in the editor dashboard, admin job list, and assignment emails.
 - The editor dashboard and admin job list now hide **overdue labels** while an assignment is in **Review**.
 
 </section>
