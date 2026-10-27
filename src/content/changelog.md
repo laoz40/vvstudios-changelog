@@ -1,9 +1,6 @@
-<section id="release-6-0" class="changelog-release changelog-release--major">
+<section id="release-5-6" class="changelog-release">
 
-<h2>
-<span class="changelog-version">Version 6.0</span>
-<span class="changelog-subtitle">Multiple editing rounds</span>
-</h2>
+## Version 5.6
 
 <p class="changelog-date">27 October 2026</p>
 
